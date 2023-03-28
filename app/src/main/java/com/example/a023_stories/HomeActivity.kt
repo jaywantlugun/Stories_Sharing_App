@@ -73,8 +73,10 @@ class HomeActivity : AppCompatActivity() {
                 for(eachStoryData in snapshot.children)
                 {
                     val data = eachStoryData.getValue(Story::class.java)
-                    val remaining_time = System.currentTimeMillis() - (data?.uploading_time ?: 0)
-                    if (data != null && remaining_time<=10) {
+                    var remaining_time:Long = System.currentTimeMillis() - (data?.uploading_time ?: 0)
+                    remaining_time = remaining_time/((60000).toLong())
+                    //Toast.makeText(this@HomeActivity,remaining_time.toString(),Toast.LENGTH_LONG).show()
+                    if (data != null && remaining_time<=((10.0).toLong())) {
                         storiesList.add(data)
                     }
 

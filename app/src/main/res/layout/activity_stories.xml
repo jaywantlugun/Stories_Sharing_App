@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
-    android:background="@color/purple_200"
+    android:background="@drawable/border"
     android:orientation="vertical"
     android:padding="5dp"
     android:layout_margin="10dp">
@@ -13,6 +13,7 @@
 
         <ImageView
             android:id="@+id/stories_user_image"
+            android:scaleType="centerCrop"
             android:layout_gravity="center_vertical"
             android:layout_width="30dp"
             android:layout_height="30dp"
@@ -31,7 +32,6 @@
     <ImageView
         android:id="@+id/stories_image"
         android:layout_width="150dp"
-        android:background="@drawable/ic_baseline_person_24"
         android:layout_height="175dp"/>
 
 </LinearLayout>
