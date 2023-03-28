@@ -9,6 +9,7 @@ import android.widget.ImageView
 import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+    //declaring variables
     lateinit var btn_login_activity: Button
     lateinit var btn_signup_activity: Button
     lateinit var imageView: ImageView
@@ -19,14 +20,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //hiding the top action bar
         if(supportActionBar!=null){
             supportActionBar!!.hide()
         }
 
+        //initialising the layout variables
         btn_signup_activity = findViewById(R.id.btn_signup_activity)
         btn_login_activity = findViewById(R.id.btn_login_activity)
         imageView = findViewById(R.id.imageView)
 
+        //clicking login button
         btn_login_activity.setOnClickListener {
 
             val loginIntent = Intent(this,LoginActivity::class.java)
@@ -36,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             // finish()
         }
 
+        //clicking sign up button
         btn_signup_activity.setOnClickListener {
 
             val signupIntent = Intent(this,SignupActivity::class.java)

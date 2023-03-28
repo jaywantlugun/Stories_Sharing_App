@@ -202,7 +202,7 @@ class SignupActivity : AppCompatActivity() {
     private fun upload_image(){
 
         val mProgressDialog = ProgressDialog(this)
-        mProgressDialog.setTitle("This is TITLE")
+        mProgressDialog.setTitle("Creating Account")
         mProgressDialog.show()
 
 

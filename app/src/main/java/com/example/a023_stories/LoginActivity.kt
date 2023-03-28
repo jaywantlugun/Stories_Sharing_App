@@ -58,6 +58,11 @@ class LoginActivity : AppCompatActivity() {
     //login function checking in firebase
     private fun login(){
 
+        if(edt_login_email.text.toString()=="" || edt_login_password.text.toString().length<6){
+            Toast.makeText(this,"Invalid Input", Toast.LENGTH_LONG).show()
+            return
+        }
+
         val login_email:String = edt_login_email.text.toString()
         val login_password:String = edt_login_password.text.toString()
 
